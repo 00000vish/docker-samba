@@ -7,14 +7,14 @@ A docker image that spins up a samba server.
 ### x64
 
 ```
-docker run -e USERNAME=storage PASSWORD=adminadmin -p 445:445 00000vish/docker-samba:latest
+docker run -e USERNAME=storage -e PASSWORD=adminadmin -p 445:445 00000vish/docker-samba:latest
 ```
 
 
 ### arm64
 
 ```
-docker run -e USERNAME=storage PASSWORD=adminadmin -p 445:445 00000vish/docker-samba:arm64
+docker run -e USERNAME=storage -e PASSWORD=adminadmin -p 445:445 00000vish/docker-samba:arm64
 ```
 
 
