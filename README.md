@@ -12,9 +12,9 @@ docker run -e USERNAME=storage PASSWORD=adminadmin -p 445:445 00000vish/docker-s
 
 ```
 services:
-  whats-my-ip:
+  docker-samba:
    image: 00000vish/docker-samba:latest
-    container_name: whats-my-ip
+    container_name: docker-samba
     environment:
       - USERNAME=storage
       - PASSWORD=adminadmin
