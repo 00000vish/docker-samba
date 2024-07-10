@@ -2,11 +2,21 @@
 
 A docker image that spins up a samba server.
 
-# Docker Run
+# Docker Run 
+
+### x64
 
 ```
-docker run -e USERNAME=storage PASSWORD=adminadmin -p 445:445 00000vish/docker-samba
+docker run -e USERNAME=storage PASSWORD=adminadmin -p 445:445 00000vish/docker-samba:latest
 ```
+
+
+### arm64
+
+```
+docker run -e USERNAME=storage PASSWORD=adminadmin -p 445:445 00000vish/docker-samba:arm64
+```
+
 
 # Docker Compose
 
