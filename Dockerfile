@@ -1,12 +1,15 @@
 FROM alpine:latest
 
+ENV USERNAME=storage
+ENV PASSWORD=T6j2Qz@q
+
 RUN apk add samba
 
 WORKDIR /storage
 RUN chmod 0777 /storage
 
-RUN adduser --system storage
-RUN (echo soivjdfvie; echo soivjdfvie) | smbpasswd -a storage
+RUN adduser --system $USERNAME
+RUN (echo $PASSWORD; echo $PASSWORD) | smbpasswd -a $USERNAME
 
 COPY ./smb.conf /etc/samba/smb.conf
 COPY ./start.sh /start.sh
