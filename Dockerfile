@@ -1,5 +1,11 @@
 FROM alpine:latest
 
+ARG USERNAME=storage
+ENV USERNAME=${USERNAME}
+
+ARG PASSWORD=T6j2Qz@q
+ENV PASSWORD=${PASSWORD}
+
 RUN apk add samba
 
 WORKDIR /storage
