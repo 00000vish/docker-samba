@@ -12,7 +12,7 @@ WORKDIR /storage
 RUN chmod 0777 /storage
 
 RUN adduser --system ${USERNAME}
-RUN (echo ${PASSWORD}; echo ${PASSWORD) | smbpasswd -a ${USERNAME}
+RUN (echo ${PASSWORD}; echo ${PASSWORD}) | smbpasswd -a ${USERNAME}
 
 COPY ./smb.conf /etc/samba/smb.conf
 COPY ./start.sh /start.sh
