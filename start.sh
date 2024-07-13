@@ -1,5 +1,7 @@
 #!/bin/sh
 
+chmod 766 /storage
+
 adduser --system $USERNAME
 (echo $PASSWORD; echo $PASSWORD) | smbpasswd -a $USERNAME
 
